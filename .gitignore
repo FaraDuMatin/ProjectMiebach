@@ -12,3 +12,4 @@ frontend/dist/
 .vscode/
 .idea/
 .DS_Store
+backend/webhook_test.json

@@ -6,7 +6,7 @@ class JiraClient:
     def __init__(self):
         self.base_url = settings.JIRA_BASE_URL.rstrip("/") + "/rest/api/3"
         self.auth = (settings.JIRA_EMAIL, settings.JIRA_API_TOKEN)
-        self.fields = "summary,status,priority,created," + settings.JIRA_COUNTRY_FIELD
+        self.fields = "summary,status,priority,created,duedate," + settings.JIRA_COUNTRY_FIELD
 
     def get(self, path, params=None):
         response = requests.get(self.base_url + path, auth=self.auth, params=params, timeout=15)

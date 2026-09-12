@@ -44,5 +44,7 @@ def sync_issue(client, issue):
     if ticket is None:
         return None
     recompute(ticket)
-    client.set_due_date(ticket.jira_key, ticket.due_at.date())
+    due_date = ticket.due_at.date()
+    if issue["fields"].get("duedate") != due_date.isoformat():
+        client.set_due_date(ticket.jira_key, due_date)
     return ticket
