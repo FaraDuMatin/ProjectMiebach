@@ -1,0 +1,200 @@
+[
+  {
+    "model": "calendar_rules.country",
+    "pk": 1,
+    "fields": {
+      "code": "CA",
+      "name": "Canada",
+      "timezone": "America/Toronto",
+      "workday_start": "09:00:00",
+      "workday_end": "17:00:00",
+      "working_days": "0,1,2,3,4"
+    }
+  },
+  {
+    "model": "calendar_rules.country",
+    "pk": 2,
+    "fields": {
+      "code": "DE",
+      "name": "Germany",
+      "timezone": "Europe/Berlin",
+      "workday_start": "08:00:00",
+      "workday_end": "17:00:00",
+      "working_days": "0,1,2,3,4"
+    }
+  },
+  {
+    "model": "calendar_rules.country",
+    "pk": 3,
+    "fields": {
+      "code": "IN",
+      "name": "India",
+      "timezone": "Asia/Kolkata",
+      "workday_start": "09:30:00",
+      "workday_end": "18:30:00",
+      "working_days": "0,1,2,3,4"
+    }
+  },
+  {
+    "model": "calendar_rules.holiday",
+    "pk": 1,
+    "fields": {
+      "country": 1,
+      "date": "2026-10-12",
+      "name": "Thanksgiving"
+    }
+  },
+  {
+    "model": "calendar_rules.holiday",
+    "pk": 2,
+    "fields": {
+      "country": 1,
+      "date": "2026-12-25",
+      "name": "Christmas Day"
+    }
+  },
+  {
+    "model": "calendar_rules.holiday",
+    "pk": 3,
+    "fields": {
+      "country": 2,
+      "date": "2026-10-03",
+      "name": "German Unity Day"
+    }
+  },
+  {
+    "model": "calendar_rules.holiday",
+    "pk": 4,
+    "fields": {
+      "country": 2,
+      "date": "2026-12-25",
+      "name": "Christmas Day"
+    }
+  },
+  {
+    "model": "calendar_rules.holiday",
+    "pk": 5,
+    "fields": {
+      "country": 3,
+      "date": "2026-10-02",
+      "name": "Gandhi Jayanti"
+    }
+  },
+  {
+    "model": "calendar_rules.holiday",
+    "pk": 6,
+    "fields": {
+      "country": 3,
+      "date": "2026-11-09",
+      "name": "Diwali"
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 1,
+    "fields": {
+      "country": 1,
+      "priority": "P1",
+      "hours": 4
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 2,
+    "fields": {
+      "country": 1,
+      "priority": "P2",
+      "hours": 8
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 3,
+    "fields": {
+      "country": 1,
+      "priority": "P3",
+      "hours": 24
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 4,
+    "fields": {
+      "country": 1,
+      "priority": "P4",
+      "hours": 40
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 5,
+    "fields": {
+      "country": 2,
+      "priority": "P1",
+      "hours": 4
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 6,
+    "fields": {
+      "country": 2,
+      "priority": "P2",
+      "hours": 8
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 7,
+    "fields": {
+      "country": 2,
+      "priority": "P3",
+      "hours": 16
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 8,
+    "fields": {
+      "country": 2,
+      "priority": "P4",
+      "hours": 40
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 9,
+    "fields": {
+      "country": 3,
+      "priority": "P1",
+      "hours": 8
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 10,
+    "fields": {
+      "country": 3,
+      "priority": "P2",
+      "hours": 16
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 11,
+    "fields": {
+      "country": 3,
+      "priority": "P3",
+      "hours": 24
+    }
+  },
+  {
+    "model": "calendar_rules.slapolicy",
+    "pk": 12,
+    "fields": {
+      "country": 3,
+      "priority": "P4",
+      "hours": 48
+    }
+  }
+]

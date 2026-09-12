@@ -7,7 +7,7 @@ SOURCES = [
     ("email", "Email"),
 ]
 
-PAUSED_STATUS = "Waiting for customer"
+PAUSED_STATUS = "Waiting For Customer"
 
 
 class Ticket(models.Model):
