@@ -17,6 +17,15 @@ class JiraClient:
         response = requests.put(self.base_url + path, auth=self.auth, json=body, timeout=15)
         response.raise_for_status()
 
+    def post(self, path, body):
+        response = requests.post(self.base_url + path, auth=self.auth, json=body, timeout=15)
+        response.raise_for_status()
+        return response.json()
+
+    def delete(self, path):
+        response = requests.delete(self.base_url + path, auth=self.auth, timeout=15)
+        response.raise_for_status()
+
     def search_issues(self, jql):
         issues = []
         next_page_token = None
@@ -35,3 +44,18 @@ class JiraClient:
 
     def set_due_date(self, key, date):
         self.put("/issue/" + key, {"fields": {"duedate": date.isoformat()}})
+
+    def create_issue(self, title, priority, country_code):
+        body = {
+            "fields": {
+                "project": {"key": settings.JIRA_PROJECT_KEY},
+                "issuetype": {"name": "Task"},
+                "summary": title,
+                "priority": {"name": priority},
+                settings.JIRA_COUNTRY_FIELD: {"value": country_code},
+            }
+        }
+        return self.post("/issue", body)["key"]
+
+    def delete_issue(self, key):
+        self.delete("/issue/" + key)

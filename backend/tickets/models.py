@@ -8,6 +8,7 @@ SOURCES = [
 ]
 
 PAUSED_STATUS = "Waiting For Customer"
+DONE_STATUS = "Done"
 
 
 class Ticket(models.Model):
