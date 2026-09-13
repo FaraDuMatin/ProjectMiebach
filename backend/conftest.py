@@ -32,3 +32,10 @@ def germany(db):
         workday_end=time(17),
         working_days="0,1,2,3,4",
     )
+
+
+@pytest.fixture
+def api(client, django_user_model):
+    user = django_user_model.objects.create_user(username="tester", password="secret123")
+    client.force_login(user)
+    return client
