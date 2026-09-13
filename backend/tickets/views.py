@@ -3,7 +3,7 @@ from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Ticket
+from .models import DONE_STATUS, Ticket
 from .serializers import TicketSerializer
 from .sla import bucket
 
@@ -19,7 +19,7 @@ class TicketFilter(django_filters.FilterSet):
 
 
 def tickets_with_due_date():
-    return Ticket.objects.select_related("country").exclude(due_at=None).order_by("due_at")
+    return Ticket.objects.select_related("country").exclude(due_at=None).exclude(status=DONE_STATUS).order_by("due_at")
 
 
 class TicketListView(ListAPIView):
