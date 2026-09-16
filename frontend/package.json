@@ -10,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@picocss/pico": "^2.1.1",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "recharts": "^3.10.1"
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
