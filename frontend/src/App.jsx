@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { apiGet, apiPost } from './api'
 import { Board } from './components/Board'
 import { Filters } from './components/Filters'
-import { LoadChart } from './components/LoadChart'
 import { Login } from './components/Login'
 import { useApi } from './hooks/useApi'
 import { useNow } from './hooks/useNow'
@@ -31,7 +30,6 @@ function App() {
 function Dashboard({ user, filters, onFilters, onLogout }) {
   const query = `?country=${filters.country}&priority=${filters.priority}`
   const tickets = useApi(`/api/tickets/${query}`, REFRESH_MS)
-  const stats = useApi(`/api/stats/`, REFRESH_MS)
   const countries = useApi('/api/countries/')
   const now = useNow(60000)
 
@@ -45,7 +43,6 @@ function Dashboard({ user, filters, onFilters, onLogout }) {
       </header>
       {tickets.error && <p className="error">{tickets.error}</p>}
       <Board tickets={tickets.data || []} now={now} />
-      {stats.data && <LoadChart byCountry={stats.data.by_country} />}
     </div>
   )
 }

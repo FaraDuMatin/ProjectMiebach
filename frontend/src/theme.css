@@ -1,0 +1,92 @@
+:root {
+  --pico-font-size: 93.75%;
+  --pico-spacing: 0.75rem;
+  --pico-border-radius: 0;
+  --ink: #0a1414;
+  --panel: #111f1f;
+  --edge: #1f3636;
+  --text: #ffffff;
+  --muted: #8fa9a8;
+  --teal: #48a0a3;
+  --aqua: #90efe4;
+  --at-risk: #d97706;
+  --on-time: #16a34a;
+  --breached: #dc2626;
+  --paused: #6b7280;
+}
+
+:root:not([data-theme="dark"]) {
+  --pico-color: var(--ink);
+  --pico-h1-color: var(--ink);
+  --pico-h2-color: var(--ink);
+  --pico-primary: var(--teal);
+  --pico-primary-background: var(--teal);
+  --pico-primary-border: var(--teal);
+  --pico-primary-hover: #3a8588;
+  --pico-primary-hover-background: #3a8588;
+  --pico-primary-inverse: var(--ink);
+  --pico-primary-focus: rgba(72, 160, 163, 0.35);
+}
+
+body {
+  background: var(--ink);
+}
+
+.error {
+  color: var(--breached);
+}
+
+.login {
+  max-width: 320px;
+  margin: 120px auto;
+  padding: 24px;
+  background: #ffffff;
+}
+
+.app {
+  height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar h1 {
+  font: italic 1.6rem Georgia, "Times New Roman", serif;
+  color: #ffffff;
+  margin: 0 auto 0 0;
+}
+
+.topbar select, .topbar button {
+  width: auto;
+  margin: 0;
+  padding: 0.4rem 2rem 0.4rem 0.8rem;
+}
+
+.topbar select {
+  color: var(--teal);
+  border-color: #ffffff;
+}
+
+.topbar button {
+  padding-right: 0.8rem;
+  background: var(--aqua);
+  border-color: var(--aqua);
+  color: var(--ink);
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.user {
+  color: var(--aqua);
+}
+
