@@ -13,3 +13,4 @@ backend/frontend_dist/
 .idea/
 .DS_Store
 backend/webhook_test.json
+*.PublishSettings
